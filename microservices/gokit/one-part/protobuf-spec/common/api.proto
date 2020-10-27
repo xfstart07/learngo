@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package common;
+
+message Empty{}
+
+// UserManager
+
+message User {
+    string Name = 1;
+    string Company = 2;
+}
+
+message UserList {
+    repeated User List = 1;   
+}
+
+message DispatchRequest {
+    string Name = 1;
+    string Company = 2;
+}
+
+service UserManagerService {
+    rpc List(Empty) returns (UserList);
+    rpc AddUser(UserList) returns(Empty);
+    rpc Dispatch (DispatchRequest) returns (Empty);
+}
+
+// Department
+
+message Department {
+    string Name = 1;
+    repeated User Users = 2;
+}
+
+message DepartmentList {
+    repeated Department List = 1;
+}
+
+message PersonChangeRequest {
+    User User = 1;
+    string Company = 2;
+}
+
+service DepartmentManagerService {
+    rpc List(Empty) returns(DepartmentList);
+    rpc Create(Department) returns (Empty);
+    rpc PersonChange(PersonChangeRequest) returns(Empty);
+}

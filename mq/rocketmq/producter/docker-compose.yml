@@ -1,0 +1,14 @@
+version: "3"
+services:
+  prod1:
+    image: registry.cn-hangzhou.aliyuncs.com/dockerxf/rocketmq:prod
+    command: /data/producter --job=5000 --worker=50
+    working_dir: /data
+    environment:
+      - TZ=Asia/Shanghai
+  prod2:
+    image: registry.cn-hangzhou.aliyuncs.com/dockerxf/rocketmq:prod
+    command: /data/producter --job=5000  --worker=50
+    working_dir: /data
+    environment:
+      - TZ=Asia/Shanghai

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+// 声明所在包下
+package custom_gen;
+
+// 定义传输字段信息
+message String {
+    string value = 1;
+}
+
+// 定义RPC服务接口
+service HelloService {
+    rpc Hello (String) returns (String);
+}

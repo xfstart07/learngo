@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+// 项目的具体路径，不一定是 go import 的路径，不一定带版本目录
+// Bad github.com/micro/go-micro/v2/api/proto
+import "github.com/micro/go-micro/api/proto/api.proto";
+
+service Open {
+    rpc Fetch(go.api.Request) returns (go.api.Response) {
+    };
+}
