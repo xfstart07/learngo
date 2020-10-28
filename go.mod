@@ -55,7 +55,8 @@ require (
 	github.com/sirupsen/logrus v1.4.2
 	github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a
 	github.com/streadway/amqp v0.0.0-20200108173154-1c71cc93ed71
-	github.com/stretchr/testify v1.4.0
+	github.com/stretchr/testify v1.5.1
+	github.com/t-tiger/gorm-bulk-insert/v2 v2.0.1
 	github.com/tealeg/xlsx v1.0.5
 	github.com/unidoc/unipdf/v3 v3.4.1
 	github.com/valyala/fasthttp v1.3.0 // indirect
