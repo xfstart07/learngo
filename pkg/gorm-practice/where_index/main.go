@@ -6,8 +6,8 @@ package main
 import (
 	"math/rand"
 
-	db2 "learngo/pkg/gormexp/db"
-	"learngo/pkg/gormexp/model"
+	db2 "learngo/pkg/gorm-practice/db"
+	"learngo/pkg/gorm-practice/model"
 
 	"github.com/bxcodec/faker/v3"
 	"github.com/jinzhu/gorm"

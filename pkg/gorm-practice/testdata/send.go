@@ -6,7 +6,7 @@ package main
 import (
 	"log"
 
-	"learngo/pkg/gormexp/model"
+	"learngo/pkg/gorm-practice/model"
 
 	"github.com/bxcodec/faker/v3"
 )

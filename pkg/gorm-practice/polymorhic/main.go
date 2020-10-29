@@ -6,7 +6,7 @@ package main
 import (
 	"fmt"
 
-	db2 "learngo/pkg/gormexp/db"
+	db2 "learngo/pkg/gorm-practice/db"
 
 	"github.com/jinzhu/gorm"
 )

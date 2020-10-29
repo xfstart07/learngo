@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"learngo/pkg/gormexp/model"
+	"learngo/pkg/gorm-practice/model"
 )
 
 func main() {

@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	db2 "learngo/pkg/gormexp/db"
-	"learngo/pkg/gormexp/model"
+	db2 "learngo/pkg/gorm-practice/db"
+	"learngo/pkg/gorm-practice/model"
 )
 
 // 经实验，在 MySQL 5.7 版本下，隔离级别：可重复读，并没有发送幻读，一个事务内两次读取的数据一致。
