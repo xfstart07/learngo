@@ -6,27 +6,15 @@ package main
 import (
 	"context"
 	"log"
-	"time"
-
-	"github.com/coreos/etcd/client"
 )
 
 func main() {
-	cfg := client.Config{
-		Endpoints:               []string{"http://weixinote.dev:2379"},
-		Transport:               client.DefaultTransport,
-		HeaderTimeoutPerRequest: time.Second,
-	}
 
-	c, err := client.New(cfg)
-	if err != nil {
-		log.Fatal(err)
-	}
-	kapi := client.NewKeysAPI(c)
+	c := BuildClient([]string{"http://weixinote.dev:2379"})
 
 	// set "/foo" key with "bar" value
 	log.Print("Setting '/foo' key with 'bar' value")
-	resp, err := kapi.Set(context.Background(), "/foo", "bar", nil)
+	resp, err := c.Put(context.Background(), "/foo", "bar", nil)
 	if err != nil {
 		log.Fatal(err)
 	} else {
@@ -36,13 +24,13 @@ func main() {
 
 	// get "/foo" key's value
 	log.Print("Getting '/foo' key value")
-	resp, err = kapi.Get(context.Background(), "/foo", nil)
+	resp2, err := c.Get(context.Background(), "/foo", nil)
 	if err != nil {
 		log.Fatal(err)
 	} else {
 		// print common key info
 		log.Printf("Get is done. Metadata is %q\n", resp)
 		// print value
-		log.Printf("%q key has %q value\n", resp.Node.Key, resp.Node.Value)
+		log.Printf("%+v\n", resp2.Kvs)
 	}
 }
