@@ -13,3 +13,7 @@ push: # git push
 	git add .
 	git commit -m 'update'
 	git push origin master
+
+cloc:
+	@echo Push
+	cloc . --exclude-dir=vendor
