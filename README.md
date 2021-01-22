@@ -3,7 +3,7 @@
 ### 算法
 
 * [目录](algorithm)
-* [LeetCode](leetcode)
+* [LeetCode](algorithm/leetcode)
 
 ### 学习
 
