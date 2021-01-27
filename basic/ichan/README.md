@@ -65,3 +65,7 @@ type hchan struct {
 `runtime/chan.go`
 
 `hchan` 是 channel 的实际数据结构。
+
+### Ref
+
+* https://mp.weixin.qq.com/s/ZXYpfLNGyej0df2zXqfnHQ
