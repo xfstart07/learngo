@@ -52,7 +52,7 @@ require (
 	github.com/prometheus/client_golang v1.3.0 // indirect
 	github.com/rs/xid v1.2.1
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
-	github.com/satori/go.uuid v1.2.0
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.4.2
 	github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a
 	github.com/streadway/amqp v0.0.0-20200108173154-1c71cc93ed71

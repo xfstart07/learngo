@@ -3,11 +3,11 @@
 package main
 
 import (
-	"encoding/hex"
 	"fmt"
+	"log"
 
 	"github.com/dgrijalva/jwt-go"
-	uuid "github.com/satori/go.uuid"
+	"github.com/google/uuid"
 )
 
 type User struct {
@@ -18,22 +18,17 @@ type User struct {
 
 func main() {
 	payload := &User{
-		Nonce: GetUUIDV4(),
-		Orig:  "body",
+		Nonce:          uuid.New().String(),
+		Orig:           "body",
+		StandardClaims: jwt.StandardClaims{},
 	}
 
 	token := jwt.NewWithClaims(jwt.GetSigningMethod("HS256"), payload)
 
 	tokenStr, err := token.SignedString([]byte("secret"))
-
-	fmt.Println(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	fmt.Printf("%+v", tokenStr)
-
-}
-
-func GetUUIDV4() (uuidHex string) {
-	uuidV4 := uuid.NewV4()
-	uuidHex = hex.EncodeToString(uuidV4.Bytes())
-	return
 }
