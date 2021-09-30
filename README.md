@@ -7,7 +7,7 @@
 
 ### 学习
 
-* Go基础（[标准库](/basic), [第三方库](/pkg)）
+* Go基础（[标准库](/gobasics), [第三方库](/pkg)）
 * 分布式 ([distribute](/distributedtool)）
 * 消息队列 ([mq](mq)）
 * [技巧记录](tips)

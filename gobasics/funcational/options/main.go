@@ -5,7 +5,7 @@ package main
 
 import (
 	"fmt"
-	"learngo/basic/funcational/options/app"
+	"learngo/gobasics/funcational/options/app"
 )
 
 func main() {
