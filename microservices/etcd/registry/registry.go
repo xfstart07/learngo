@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"learngo/pkg/xgo"
+	"learngo/thirdparty/xgo"
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/mvcc/mvccpb"

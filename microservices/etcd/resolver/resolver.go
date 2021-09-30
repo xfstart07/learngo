@@ -8,7 +8,7 @@ import (
 	"log"
 
 	"learngo/microservices/etcd/registry"
-	"learngo/pkg/xgo"
+	"learngo/thirdparty/xgo"
 
 	"google.golang.org/grpc/resolver"
 )
