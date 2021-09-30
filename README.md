@@ -8,9 +8,8 @@
 ### 学习
 
 * Go基础（[标准库](/gobasics), [第三方库](/thirdparty)）
-* 分布式 ([distribute](/distributedtool)）
 * 消息队列 ([mq](thirdparty/mq)）
-* [技巧记录](tips)
+* [编程模式](programpatten)
 
 ### 书籍和教程
 
@@ -43,6 +42,11 @@
 * [rpc学习](microservices/rpc)
 * [gomicro](gomicro)
 * [microservices](microservices)
+
+### 分布式
+
+* [分布式ID](distributed/distributed_id)
+* [分布式锁](distributed/lock)
 
 ### 学习图谱
 
