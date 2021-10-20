@@ -63,6 +63,7 @@ require (
 	github.com/tealeg/xlsx v1.0.5
 	github.com/unidoc/unipdf/v3 v3.4.1
 	github.com/valyala/fasthttp v1.3.0 // indirect
+	go.etcd.io/bbolt v1.3.3
 	go.uber.org/atomic v1.5.1 // indirect
 	go.uber.org/multierr v1.4.0 // indirect
 	go.uber.org/zap v1.13.0
