@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object London
+object Washington
+object Berlin
+object NewYork
+
+map CapitalCity {
+ UK *-> London
+ USA *--> Washington
+ Germany *---> Berlin
+}
+
+NewYork --> CapitalCity::USA
+
+' 语法
+' .. 虚线
+' object 表示对象
+
+' newpage 泛化 Extension
+
+' 泛化 Extension
+
+object1 <|-- object2 : 泛化
+
+' 实现  realize
+
+objecti1 <|.. objecti2 : 实现
+
+' 组合 Composition
+
+object3 *-- object4 : 组合
+
+' 聚合 Aggregation
+
+object5 o-- object6 : 聚合
+
+' 关联 correlation
+
+object7 --> object8 : 关联
+
+' 依赖
+
+object9 ..> object10 : 依赖
+
+@enduml
