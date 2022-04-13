@@ -64,7 +64,7 @@ require (
 	github.com/unidoc/unipdf/v3 v3.4.1
 	github.com/valyala/fasthttp v1.3.0 // indirect
 	go.etcd.io/bbolt v1.3.3
-	go.uber.org/atomic v1.5.1 // indirect
+	go.uber.org/atomic v1.5.1
 	go.uber.org/multierr v1.4.0 // indirect
 	go.uber.org/zap v1.13.0
 	golang.org/x/net v0.0.0-20200707034311-ab3426394381 // indirect
