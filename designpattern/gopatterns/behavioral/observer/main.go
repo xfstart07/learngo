@@ -46,9 +46,11 @@ func (o *eventObserver) OnNotify(e Event) {
 func (o *eventNotifier) Register(l Observer) {
 	o.observers[l] = struct{}{}
 }
+
 func (o *eventNotifier) Deregister(l Observer) {
 	o.observers[l] = struct{}{}
 }
+
 func (o *eventNotifier) Notify(e Event) {
 	for ob := range o.observers {
 		ob.OnNotify(e)
