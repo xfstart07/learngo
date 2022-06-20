@@ -6,3 +6,5 @@
 sideproject/lagou/pholcus_pkg
 
 vendor/
+
+gormsqlite.db

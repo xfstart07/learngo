@@ -20,11 +20,23 @@ type User struct {
 //ALTER TABLE users ADD INDEX index_age (age);
 //ALTER TABLE users ADD INDEX index_name (name);
 type UserInfo struct {
-	ID   uint   `gorm:"primary_key"`
-	Name string `gorm:"not null"`
-	Age  int    `gorm:"not null"`
+	ID        uint   `gorm:"primary_key"`
+	Name      string `gorm:"not null;default:''"`
+	Age       int    `gorm:"not null;default:0"`
+	CompanyID uint   `gorm:"not null"`
+	Company   Company
 }
 
 func (u *UserInfo) TableName() string {
 	return "users"
+}
+
+type CreditCard struct {
+	gorm.Model
+	Number string
+	UserID uint
+}
+
+func (*CreditCard) TableName() string {
+	return "creditcard"
 }

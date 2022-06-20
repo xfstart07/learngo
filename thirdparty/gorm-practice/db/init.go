@@ -4,23 +4,18 @@
 package db
 
 import (
-	"github.com/jinzhu/gorm"
-
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 var MySqlHandler *gorm.DB
 
 func InitMySql() {
-	open, err := gorm.Open("mysql", "root:123456@tcp(local.bjywkd.test:3306)/learngo?charset=utf8mb4&loc=Local&parseTime=true")
+	dns := "root:123456@tcp(local.bjywkd.test:3306)/learngo?charset=utf8mb4&loc=Local&parseTime=true"
+	open, err := gorm.Open(mysql.Open(dns), &gorm.Config{})
 	if err != nil {
 		panic(err)
 	}
-
-	open.LogMode(true)
-	open.DB().SetMaxIdleConns(10)
-	open.DB().SetMaxOpenConns(100)
-	open.DB().SetConnMaxLifetime(7200)
 
 	MySqlHandler = open
 }

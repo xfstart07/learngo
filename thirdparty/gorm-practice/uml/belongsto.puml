@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+'https://yyxwho.notion.site/PlantUML-34dd03800de54c1e8a209a7826eaa2c9#d1d963fab8174903a40991430e05b4cd
+
+title BelongsTo 关系
+
+User ..|| "只有1" Company
+
+@enduml

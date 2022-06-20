@@ -54,11 +54,10 @@ require (
 	github.com/prometheus/client_golang v1.3.0 // indirect
 	github.com/rs/xid v1.2.1
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
-	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.4.2
 	github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a
 	github.com/streadway/amqp v0.0.0-20200108173154-1c71cc93ed71
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.7.0
 	github.com/t-tiger/gorm-bulk-insert/v2 v2.0.1
 	github.com/tealeg/xlsx v1.0.5
 	github.com/unidoc/unipdf/v3 v3.4.1
@@ -72,10 +71,12 @@ require (
 	golang.org/x/sys v0.0.0-20200622214017-ed371f2e16b4 // indirect
 	golang.org/x/text v0.3.3 // indirect
 	golang.org/x/tools v0.0.0-20191227053925-7b8e75db28f4 // indirect
-	google.golang.org/appengine v1.6.5 // indirect
 	google.golang.org/grpc v1.27.0
 	google.golang.org/protobuf v1.24.0
 	gopkg.in/olivere/elastic.v6 v6.2.19
+	gorm.io/driver/mysql v1.3.4
+	gorm.io/driver/sqlite v1.3.4
+	gorm.io/gorm v1.23.6
 	sigs.k8s.io/yaml v1.2.0 // indirect
 )
 
