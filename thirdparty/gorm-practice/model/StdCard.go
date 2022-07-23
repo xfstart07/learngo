@@ -1,6 +1,3 @@
-// Author: xufei
-// Date: 2020/10/26
-
 package model
 
 type StuCard struct {

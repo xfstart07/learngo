@@ -1,6 +1,3 @@
-// Author: xufei
-// Date: 2020/7/21
-
 package model
 
 import (

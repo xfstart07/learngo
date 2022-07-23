@@ -1,6 +1,3 @@
-// Author: xufei
-// Date: 2020/10/20
-
 package model
 
 type Student struct {

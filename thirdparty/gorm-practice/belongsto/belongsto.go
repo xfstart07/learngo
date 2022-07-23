@@ -8,6 +8,7 @@ import (
 
 func main() {
 	db.InitSqlite()
+	defer db.CleanSqlite()
 
 	if err := db.SqliteHandler.AutoMigrate(&model.UserInfo{}, &model.Company{}); err != nil {
 		panic(err)
@@ -31,8 +32,6 @@ func main() {
 	if err := db.SqliteHandler.Preload("Company").Find(&users).Error; err != nil {
 		panic(err)
 	}
-
+	log.Println("company", users[0].Company)
 	log.Printf("users: %+v", users)
-
-	db.CleanSqlite()
 }

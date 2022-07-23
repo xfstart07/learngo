@@ -11,12 +11,14 @@ var SqliteHandler *gorm.DB
 
 func InitSqlite() {
 	dbpath := "./gormsqlite.db?_timeout=5000"
-	open, err := gorm.Open(sqlite.Open(dbpath))
+	open, err := gorm.Open(sqlite.Open(dbpath), &gorm.Config{
+		DisableForeignKeyConstraintWhenMigrating: true, // 禁用外键约束
+	})
 	if err != nil {
 		panic(err)
 	}
 
-	SqliteHandler = open
+	SqliteHandler = open.Debug()
 }
 
 func CleanSqlite() {
